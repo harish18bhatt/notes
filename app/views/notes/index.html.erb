@@ -1,0 +1,24 @@
+<% content_for :title, "Notes" %>
+
+<div class="row">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">My Notes, Organized & Effortless</h1>
+      <p>
+        The simplest way to keep notes. Find information faster. Share ideas with anyone.<br/>
+        Meeting notes, web pages, projects, to-do lists.
+      </p>
+      <p><%= link_to "Create Note", new_note_path, class: "btn btn-primary btn-lg" %></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <% if @notes.present? %>
+        <%= render @notes.map{|note| NoteDecorator.new(note) } %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%== pagy_bootstrap_nav(@pagy) %>

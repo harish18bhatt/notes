@@ -1,0 +1,13 @@
+<% content_for :title, "New Note" %>
+<br/>
+<div class="container d-flex justify-content-center">
+  <div class="card bg-light w-50">
+    <div class="card-header"><h4>New Note</h4></div>
+    <div class="card-body">
+      <%= form_for @note, method: :post do |f| %>
+        <%= render 'form', f: f, note: @note %>
+        <%= f.submit class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

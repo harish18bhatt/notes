@@ -1,0 +1,13 @@
+<div class="col-sm-4">
+  <div class="card text-white bg-light mb-3" style="max-width: 18rem;">
+    <div class="card-header text-dark"><%= note.short_title %></div>
+    <div class="card-body">
+      <p class="card-text text-body"><%= note.short_body %></p>
+      <p class="card-text text-info"><small>Tags: <%= note.tag_list %></small></p>
+      <div class="col text-center">
+        <%= link_to "Show", note_path(note), class: "btn btn-primary btn-sm float-left" %>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>

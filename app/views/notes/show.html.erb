@@ -1,0 +1,11 @@
+<% content_for :title, @note.short_title %>
+
+<br/>
+<div class="card ml-5 mr-5">
+  <div class="card-header"><%= @note.title %></div>
+  <div class="card-body">
+    <p class="card-text text-justify"><%= @note.body %></p>
+    <p class="card-text text-info"><small>Tags: <%= @note.tag_list %></small></p>
+    <%= link_to "Back", notes_path, class: "btn btn-primary" %>
+  </div>
+</div>
